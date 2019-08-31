@@ -1,12 +1,12 @@
 
-public class ClientMain {
+public class ServerMain {
 	private static int port;
 	public static void main(String[] args) {
 		if(args.length < 1){ 
-			System.out.println("Usage: ClientMain <port>");
+			System.out.println("Usage: <port>");
 			System.exit(1);
-		} 
+		}
 		port=Integer.valueOf(args[0]);
-		HelloClient c = new HelloClient("localhost", port);
+		HelloServer s = new HelloServer(port);
 	}
 }
